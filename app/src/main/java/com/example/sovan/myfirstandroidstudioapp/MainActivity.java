@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -14,6 +15,7 @@ public class MainActivity extends ActionBarActivity {
     private TextView mTextView;
     private Button mButton;
     private Button mButton2;
+    private EditText mEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,11 @@ public class MainActivity extends ActionBarActivity {
         mButton = (Button) findViewById(R.id.button);
         mButton2 = (Button) findViewById(R.id.button2);
         mTextView = (TextView) findViewById(R.id.textView);
+        mEditText = (EditText) findViewById(R.id.editText);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTextView.setText("Test1 completed!");
+                mTextView.setText(mEditText.getText());
             }
         });
         mButton2.setOnClickListener(new View.OnClickListener() {
